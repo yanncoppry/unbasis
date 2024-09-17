@@ -332,9 +332,7 @@ main section article.with-image .inner {
 }
 @media all and (max-width: 800px) {
   main section article.with-image .inner {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    display: inline-block;
   }
 }
 main section article.with-image .left .visual {
