@@ -1,0 +1,528 @@
+@charset "UTF-8";
+/* FONT-FAMILY VARIABLES */
+/* FONT-SIZE VARIABLES */
+/* FONT-WEIGHT VARIABLES */
+/* COLOR VARIABLES */
+/* OTHERS COLOR VARIABLES */
+/* PADDING VARIABLES */
+/* ESSENTIALS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "../fonts/icomoon/style.css";
+@import "modules/form.css";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.response {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+@media all and (max-width: 1040px) {
+  .response {
+    width: 100%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+u {
+  text-underline-offset: auto;
+}
+
+header {
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+  color: #FFFFFF;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  z-index: 9;
+}
+header.scroll {
+  border-bottom: 1px solid #DDDDDD;
+  background: #FFFFFF;
+  color: #222;
+}
+header.scroll .el.logo svg {
+  fill: #222;
+}
+header.scroll .el.menu ul.parent li.parent.current a, header.scroll .el.menu ul.parent li.parent:hover a, header.scroll .el.menu ul.parent li.parent.current:hover a, header.scroll .el.buttons ul.parent li.parent.current a, header.scroll .el.buttons ul.parent li.parent:hover a, header.scroll .el.buttons ul.parent li.parent.current:hover a {
+  background: rgba(34, 34, 34, 0.15);
+}
+header.scroll .el.menu ul.parent li.parent:hover a, header.scroll .el.buttons ul.parent li.parent:hover a {
+  background: rgba(34, 34, 34, 0.05);
+}
+header .el {
+  height: 100%;
+}
+header .el.logo {
+  width: 50px;
+  height: 100%;
+}
+header .el.logo svg {
+  padding: 0;
+  fill: #FFFFFF;
+}
+header .el.menu, header .el.buttons {
+  display: table;
+  height: 100%;
+  width: calc(100% - 180px);
+  text-align: center;
+}
+header .el.menu ul.parent, header .el.buttons ul.parent {
+  font-size: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+header .el.menu ul.parent li.parent, header .el.buttons ul.parent li.parent {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 5px;
+  font-weight: 600;
+}
+header .el.menu ul.parent li.parent a, header .el.buttons ul.parent li.parent a {
+  padding: 4px 18px;
+}
+header .el.menu ul.parent li.parent a span.icon, header .el.buttons ul.parent li.parent a span.icon {
+  font-family: "icomoon";
+  font-size: 24px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+}
+header .el.menu ul.parent li.parent:last-child, header .el.buttons ul.parent li.parent:last-child {
+  margin-right: 0;
+}
+header .el.menu ul.parent li.parent.current a, header .el.menu ul.parent li.parent:hover a, header .el.menu ul.parent li.parent.current:hover a, header .el.buttons ul.parent li.parent.current a, header .el.buttons ul.parent li.parent:hover a, header .el.buttons ul.parent li.parent.current:hover a {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+}
+header .el.menu ul.parent li.parent:hover a, header .el.buttons ul.parent li.parent:hover a {
+  background: rgba(255, 255, 255, 0.05);
+}
+header .el.menu .burger {
+  display: none;
+}
+@media all and (max-width: 800px) {
+  header .el.menu .burger {
+    display: block;
+  }
+  header .el.menu ul.parent {
+    display: none;
+  }
+}
+header .el.buttons {
+  display: table;
+  height: 100%;
+  width: 100px;
+}
+header .el.buttons ul.parent li.parent {
+  padding: 0;
+  background: #29d378;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
+header .el.buttons ul.parent li.parent a {
+  padding: 0;
+  display: block;
+  border-radius: 10px !important;
+}
+header .el.buttons ul.parent li.parent a span.icon {
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+}
+header .el.buttons ul.parent li.parent:hover a {
+  background: none !important;
+}
+
+main section {
+  padding: calc(70px * 2) 70px 70px;
+}
+@media all and (max-width: 800px) {
+  main section {
+    padding: 70px 20px;
+  }
+}
+main section article h1 {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: calc(48px * .75);
+  color: #222;
+}
+@media all and (max-width: 500px) {
+  main section article h1 {
+    font-size: calc(48px * .75);
+    line-height: calc(48px * .75);
+    margin-bottom: calc(48px * .75);
+  }
+}
+main section article h2 {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: calc(48px * .75);
+  color: #222;
+}
+main section article h2 span.image {
+  width: 190px;
+  display: inline-block;
+  padding-left: 20px;
+  position: relative;
+  top: 10px;
+}
+main section article h2 span.image svg {
+  width: 100%;
+  fill: white;
+}
+main section article h3 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  color: #222;
+}
+main section article p {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+main section article ul li {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 60px;
+}
+main section article ul li:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 60px;
+  box-shadow: 0 0 0 3px;
+  font-family: "icomoon";
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+main section article ul li .title {
+  font-weight: 700;
+  font-size: 24px;
+}
+main section article ul.counter {
+  counter-reset: my-awesome-counter;
+}
+main section article ul.counter li {
+  counter-increment: my-awesome-counter;
+}
+main section article ul.counter li:before {
+  content: counter(my-awesome-counter);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+main section article ul.persons {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media all and (max-width: 500px) {
+  main section article ul.persons {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+main section article .partners {
+  display: inline-block;
+}
+main section article .partners .partner {
+  width: 70px;
+  float: left;
+  margin-right: 8px;
+}
+main section article .partners .partner:last-child {
+  margin-right: 0;
+}
+main section article .partners .partner svg {
+  width: 100%;
+}
+main section article .partners .partner svg#francerelance #circle .st0 {
+  fill: #FFFFFF !important;
+}
+main section article .buttons {
+  margin: 50px 0;
+  text-align: center;
+}
+main section article .buttons button {
+  border: 0;
+  background: #222;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 24px;
+  border-radius: 25px;
+}
+main section article .buttons button a {
+  padding: 10px 30px;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+@media all and (max-width: 500px) {
+  main section article .buttons button a {
+    font-size: 16px;
+  }
+}
+main section article .buttons button:hover, main section article .buttons button:focus {
+  background: none;
+  box-shadow: 0 0 0 3.5px;
+  color: #222;
+}
+main section article.with-image .inner {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+@media all and (max-width: 800px) {
+  main section article.with-image .inner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+main section article.with-image .left .visual {
+  width: 100%;
+}
+main section article.with-image .left .visual img {
+  width: 100%;
+}
+main section article.with-image .left .visuals {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+main section.dark {
+  background: #222;
+  color: white;
+}
+main section.dark article h1, main section.dark article h2, main section.dark article h3 {
+  color: white;
+}
+main section.dark article .buttons button {
+  background: #FFFFFF;
+  color: #222;
+}
+main section.dark article .buttons button:hover, main section.dark article .buttons button:focus {
+  background: none;
+  box-shadow: 0 0 0 3.5px;
+  color: #FFFFFF;
+}
+main section.hero {
+  padding-top: 160px;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100vh;
+}
+@media all and (max-width: 800px) {
+  main section.hero {
+    display: flex;
+    height: initial !important;
+  }
+}
+main section.hero .left, main section.hero .right {
+  width: 50%;
+  display: table;
+  height: 100%;
+  float: left;
+}
+@media all and (max-width: 800px) {
+  main section.hero .left, main section.hero .right {
+    width: 100%;
+    height: initial;
+    text-align: center !important;
+  }
+  main section.hero .left .buttons, main section.hero .right .buttons {
+    text-align: center !important;
+    margin: 50px 0 !important;
+  }
+}
+main section.hero .left {
+  text-align: right;
+}
+main section.hero .right .card {
+  background: #FFFFFF;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+main section.hero .right .card .head {
+  background: #29d377;
+  height: 120px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  display: table;
+  text-align: center;
+}
+main section.hero .right .card .head .title {
+  font-size: 22px;
+  font-weight: 700;
+}
+main section.hero .right .card .head .subtitle {
+  font-size: 12px;
+  font-weight: 400;
+}
+main section.hero article p {
+  font-size: 24px;
+}
+main section.hero article .buttons {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+footer {
+  width: 100%;
+  padding: 70px;
+  color: #222;
+  border-top: 1px solid #DDDDDD;
+  font-size: 12px;
+}
+@media all and (max-width: 500px) {
+  footer {
+    padding: 70px 20px;
+  }
+}
+footer .cards {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+@media all and (max-width: 500px) {
+  footer .cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+footer .cards .card h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+footer .cards .card .inner .visual, footer .cards .card .inner .txt {
+  display: inline-block;
+}
+footer .cards .card .inner .visual {
+  width: 50px;
+  padding-right: 5px;
+}
+footer .cards .card .inner .visual svg {
+  width: 100% !important;
+}
+footer .cards .card .inner .visual.social {
+  height: 50px !important;
+  width: initial;
+  margin-right: 10px;
+}
+footer .cards .card .inner .visual.social svg {
+  height: 50px !important;
+  width: initial;
+}
+footer .cards .card .inner .visual.social:last-child {
+  margin-right: 0;
+}
+footer .cards .card .inner .txt span {
+  display: block;
+}
+footer .cards .card.local .txt {
+  color: #e22a21;
+}
+footer .cards .card.local .txt span.highlighted {
+  font-style: italic;
+  font-weight: 700;
+}
+@media all and (max-width: 500px) {
+  footer .cards .card {
+    text-align: center;
+  }
+}
+footer .menu {
+  margin-bottom: 50px;
+}
+footer .menu ul.parent {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+@media all and (max-width: 800px) {
+  footer .menu ul.parent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 500px) {
+  footer .menu ul.parent {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+footer .menu ul.parent li.parent > a {
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+footer .menu ul.parent li.parent ul.child li.child > a {
+  padding: 4px 0;
+  display: inline-block;
+}

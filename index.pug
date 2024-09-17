@@ -1,0 +1,245 @@
+extends _include/structure/_layout.pug
+
+block content
+  main
+    section.dark.hero(
+      style="background: url(https://images.frandroid.com/wp-content/uploads/2022/11/tado-2.jpeg)"
+    )
+      .response 
+        .left
+          .vertical
+            article
+              h1 
+                | Thermostats
+                u Connectés
+                |
+                | : 30%
+                | d'économies !
+              p Pilotez vos radiateurs où vous voulez, quand vous voulez avec notre offre "Pilotage Connecté"
+              .partners 
+                .partner 
+                  +svg_alsace
+                .partner 
+                  +svg_cee
+                .partner 
+                  +svg_francerelance
+                .partner 
+                  +svg_anah
+              .buttons 
+                button
+                  a(href="#") Équipez votre immeuble
+        .right
+          .vertical
+            .card
+              .head
+                .vertical 
+                  .title Votre Rendez-vous
+                  .subtitle Programmez votre installation en 1 clic
+              .form
+                form#app
+                  #rsform_progress_3.rsformProgress
+                    div
+                      p
+                        em
+                          | Page
+                          strong 1
+                          |
+                          | of 8
+                      .rsformProgressContainer
+                        .rsformProgressBar(style="width: 12.5%")
+                  #rsform_error_3(style="display: none")
+                    p Veuillez compléter tous les champs.
+                  // Do not remove this ID, it is used to identify the page so that the pagination script can work correctly
+                  fieldset#rsform_3_page_0.formContainer
+                    .form-row
+                      .col-md-12
+                        .form-group.rsform-block.rsform-block-address
+                          label.control-label.formControlLabel(
+                            data-toggle="tooltip",
+                            title,
+                            for="address"
+                          ) Quel est votre adresse postale ?
+                          .formControls
+                            input#address.rsform-input-box.form-control(
+                              autocomplete="address-line1",
+                              type="text",
+                              value,
+                              size="20",
+                              placeholder="Saisissez ici...",
+                              name="address",
+                              
+                            )
+                            
+                            div
+                              span.formValidation
+                                span#component29.formNoError Entrée invalide
+                        .form-group.rsform-block.rsform-block-code-postal.hidden2
+                          label.control-label.formControlLabel(
+                            data-toggle="tooltip",
+                            title,
+                            for="code_postal"
+                          ) Quel est votre code postal ?
+                          .formControls
+                            input#code_postal.rsform-input-box.form-control(
+                              autocomplete="postal-code",
+                              type="text",
+                              value,
+                              size="20",
+                              placeholder="56100",
+                              name="form[code_postal]",
+                              v-model="location.postal",
+                              aria-required="true"
+                            )
+                            div
+                              span.formValidation
+                                span#component29.formNoError Entrée invalide
+                        .form-group.rsform-block.rsform-block-ville.hidden2
+                          label.control-label.formControlLabel(
+                            data-toggle="tooltip",
+                            title,
+                            for="ville"
+                          ) Quel est votre commune de résidence ?
+                          .formControls
+                            input#ville.hidden.rsform-input-box.form-control(
+                              autocomplete="address-level2",
+                              type="text",
+                              value,
+                              size="20",
+                              placeholder="Versailles",
+                              name="form[ville]",
+                              v-model="location.city"
+                            )
+                            div
+                              span.formValidation
+                                span#component28.formNoError Entrée invalide
+                        .form-group.rsform-block.rsform-block-departement.hidden
+                          label.control-label.formControlLabel(
+                            data-toggle="tooltip",
+                            title,
+                            for="departement"
+                          ) Votre département
+                          .formControls
+                            input#departement.hidden.rsform-input-box.form-control(
+                              autocomplete="address-level1",
+                              type="text",
+                              value,
+                              size="20",
+                              name="form[departement]",
+                              v-model="location.department"
+                            )
+                            div
+                              span.formValidation
+                                span#component70.formNoError Entrée invalide
+                    .form-row
+                      .col-md-12
+                        .form-group.rsform-block.rsform-block-submit
+                          label.control-label.formControlLabel(
+                            data-toggle="tooltip",
+                            title,
+                            for="submit"
+                          )
+                          .formControls
+                            button#submitPrev.btn-primary.btn.btn_md_primary.rounded-8.bg-green2.c-white.rsform-button-prev.btn.btn-warning(
+                              type="button",
+                              onclick="rsfp_changePage(3, 6, 7)"
+                            ) Retour
+                            button#submit.btn-primary.btn.btn_md_primary.rounded-8.bg-green2.c-white.rsform-submit-button.btn.btn-primary(
+                              type="submit",
+                              name="form[submit]",
+                              
+                            ) Continuer
+                            div
+                              span.formValidation
+                  
+                  
+
+    section#why
+      .response 
+        article
+          h2 
+            | Pourquoi agir 
+            u maintenant
+            |
+            | ?
+          h3 Obligation au 1er janvier 2027
+          p À partir du 1er janvier 2027, tous les logements devront obligatoirement être équipés de systèmes de régulation de la température (thermostats) pour chaque pièce ou zone. Mais il y a une **opportunité à saisir avant le 31 décembre 2024 pour le faire gratuitement** grâce au dispositif des Certificats d'Économies d'Énergie (CEE).
+          
+          ul.counter
+            li 
+              .title Financement à 100% : 
+              .txt Si le devis est signé avant la fin 2024, les coûts de remplacement des têtes thermostatiques connectées sont entièrement pris en charge. Après cette date, l’obligation restera, mais les frais seront à votre charge d’ici 2027.
+
+            li 
+              .title Maîtrise globale du projet : 
+              .txt Il est crucial de centraliser ces installations pour éviter les risques liés au démarchage sauvage. De nombreux prestataires pourraient proposer des installations individuelles directement aux locataires, ce qui rendrait difficile de suivre qui a installé quoi, avec quel modèle ou application. En centralisant le projet, vous gardez le contrôle sur le matériel installé, vous évitez des incompatibilités entre équipements et simplifiez la gestion lors des changements de locataires.
+
+            li 
+              .title Protéger votre parc immobilier : 
+              .txt Communiquer rapidement et prendre l’initiative vous permet de protéger vos biens contre les installations non contrôlées qui pourraient être réalisées sans votre accord. En uniformisant les installations, vous garantissez un parc homogène, sans risque de confusion pour les locataires ou les gestionnaires.
+
+            li 
+              .title Réduction des coûts énergétiques : 
+              .txt En plus de respecter l’obligation légale, les têtes thermostatiques connectées permettent de réduire les consommations d’énergie jusqu’à 15%, optimisant ainsi les charges et améliorant le confort des occupants.
+          
+          .buttons 
+            button
+              a(href="") Prendre rendez-vous
+    section.dark#solution
+      .response 
+        article.with-image
+          h2 
+            | Nous travaillons avec
+            span.image
+              + svg_tado
+            |
+            | !
+          .inner
+            .left 
+              .visual
+                img(src='https://images.ctfassets.net/rro4wewtydcy/3FH5HU1P7QRmhTbSpPtkOK/2d872229f93b40a3ba83389253362184/Installation_SRT_APP_Header_FR__1_.png')
+              .visuals
+                .visual
+                  img(src='https://shop.tado.com/cdn/shop/products/smart_radiator_thermostat_box_contents_sk_1x1_0303_00_a14d4a42-3d88-492a-8ae1-2bd2708dd8ce.png?v=1670247268&width=1445')
+                .visual
+                  img(src='https://shop.tado.com/cdn/shop/products/smart_thermostat_2_srt_ib_packaging_sk_0054_00.png?v=1687893963&width=1946')
+                .visual
+                  img(src='https://shop.tado.com/cdn/shop/files/smart_radiator_thermostat_x_product_h_1x1_0867_20_1.png?v=1707290777&width=1445')
+                
+            .right
+              h3 N°1 Européen sur le marché de la régulation connectée : Plus de 4 millions de thermostats intelligents en service
+              p Situé à Munich, dans la région bavaroise, Tado est une jeune entreprise qui officie dans le domaine des équipements de chauffage et climatisation depuis 2010. Souhaitant apporter sa pierre dans l’évolution des comportements en matière de protection de l’environnement, l’entreprise allemande développe des solutions de régulation adaptées quelque soit l’âge de votre matériel.
+              p Cette initiative s’inscrit dans un mouvement plus large visant à mettre en place une programmation intelligente de nos appareils électroniques, même à distance, pour prévenir toute surconsommation ou dysfonctionnement énergétique.
+              h3 Tado X, un Thermostat révolutionnaire
+              p Contrôlez vos radiateurs où que vous soyez en toute simplicité grâce à la puissante application tado°. Économisez de l'énergie sans effort grâce à une technologie d'avenir conçue par des experts. 
+              p Pas besoin de batteries supplémentaires : chargez simplement la batterie amovible à l'aide d'un câble USB-C. 
+              .buttons 
+                button
+                  a(href="") Commandez vos kits à 0€
+    section#aboutus
+      .response 
+        article
+          h2 
+            | Qui sommes-nous ?
+          h3 LOWTECH, Société alsacienne spécialisée dans le développement de systèmes de chauffage à haute performance énergétique en collaboration avec QSBAIL, partenaire régional des bailleurs sociaux.
+          
+          ul.persons
+
+              li 
+                .title Cédric GALOUYE
+                .txt Président Directeur Général LOWTECH
+              li 
+                .title Maxime BINGOL
+                .txt Directeur des opérations LOWTECH
+              li 
+                .title Frédéric GALOUYE
+                .txt Directeur Général LOWTECH
+              li 
+                .title Maïmouna NIANE
+                .txt Directeur Général QSBAIL
+              li 
+                .title Damien Wagner
+                .txt Avocat spécialisé Réglementation
+
+          .buttons 
+            button
+              a(href="") Votre projet, on en parle ?                
