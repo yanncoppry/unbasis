@@ -1,0 +1,556 @@
+
+
+.head{
+
+}
+
+form {
+    position: relative;
+}
+form .rsformProgress p {
+    display: none;
+}
+form .rsformProgress .rsformProgressContainer {
+    width: 100%;
+    height: 4px;
+    background: #fff;
+}
+form .rsformProgress .rsformProgressContainer .rsformProgressBar {
+    width: 100%;
+    height: 4px;
+    background: #003ff4;
+}
+form fieldset#rsform_3_page_ {
+    display: block;
+}
+form fieldset {
+    width: 100%;
+    border: 0;
+    padding: 10px 0;
+}
+form fieldset.formHidden {
+    display: none;
+}
+@media all and (max-width: 800px) {
+    form fieldset {
+        padding: 0;
+   }
+}
+form fieldset .form-row .form-group {
+    padding: 0;
+    text-align: center;
+}
+form fieldset .form-row .form-group.hidden {
+    display: none;
+}
+form fieldset .form-row .form-group .formControlLabel {
+    font-size: 14px;
+    display: block;
+    color: #032a3e;
+    font-weight: 300;
+    padding: 10px;
+}
+form fieldset .form-row .form-group .formControls {
+    font-size: 0;
+    position: relative;
+    padding: 0 20px;
+}
+form fieldset .form-row .form-group .formControls .form-check {
+    display: inline-block;
+    margin: 5px;
+    padding: 0;
+}
+form fieldset .form-row .form-group .formControls .form-check .form-check-label {
+    position: relative;
+    height: 40px;
+    width: auto;
+    border: 0;
+    padding: 0 10px;
+    background: white;
+    box-shadow: 0 4px 2px rgba(0, 50, 80, 0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 40px;
+    cursor: pointer !important;
+}
+form fieldset .form-row .form-group .formControls .form-check .form-check-label.checked {
+    background: #032a3e !important;
+    color: white !important;
+}
+form fieldset .form-row .form-group .formControls .form-check .form-check-label input[type=checkbox], form fieldset .form-row .form-group .formControls .form-check .form-check-label input[type=radio] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+form fieldset .form-row .form-group .formControls .form-check .form-check-label input[type=checkbox] + *, form fieldset .form-row .form-group .formControls .form-check .form-check-label input[type=radio] + * {
+    color: white;
+}
+form fieldset .form-row .form-group .formControls .form-check .form-check-label input[type=checkbox]:checked:after, form fieldset .form-row .form-group .formControls .form-check .form-check-label input[type=radio]:checked:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 0 1px;
+    border-radius: 4px;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch {
+   /*display: inline-flex;
+   */
+    align-items: center;
+    padding: 0 !important;
+    align-items: center;
+    padding: 0 !important;
+    height: initial;
+    width: 100%;
+    box-shadow: initial;
+    line-height: 2.3;
+    color: #f90;
+    font-weight: 700;
+    text-align: left;
+    outline: none;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch.checked {
+    background: initial !important;
+    color: green !important;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch.checked:after {
+    content: "!";
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__input:checked + .toggle-switch__slider {
+    background-color: green;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__input:checked + .toggle-switch__slider::before {
+    transform: translate(22px, -50%);
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__input:disabled + .toggle-switch__slider {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__input:disabled + .toggle-switch__slider::before {
+    background-color: rgba(32, 37, 50, 0.14);
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__slider {
+    box-sizing: border-box;
+    margin-right: 9px;
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #f90;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    cursor: pointer;
+    top: 10px;
+    float: left;
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch__slider::before {
+    transition: transform 75ms ease-in-out;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25), 0 2px 8px 0 rgba(32, 37, 50, 0.16);
+    position: absolute;
+    border-radius: 100%;
+    top: 15px;
+    transform: translate(4px, -50%);
+}
+form fieldset .form-row .form-group .formControls .form-check .toggle-switch:after {
+    content: "?";
+}
+@media all and (max-width: 800px) {
+    form fieldset .form-row .form-group .formControls .form-check.iconify {
+        margin: -3px;
+   }
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify .form-check-label {
+    height: 90px;
+    width: 80px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 11px;
+    line-height: 11px;
+    overflow: hidden;
+    color: #111;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    text-overflow: ellipsis;
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify .form-check-label:before {
+    content: "";
+    font-family: "icomoon";
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 0;
+    font-size: 65px;
+    font-weight: 300;
+    padding: 5px;
+    color: #032a3e;
+    z-index: 3;
+    line-height: 65px;
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify .form-check-label.checked {
+    background-image: linear-gradient(134deg, #4a3c83 17.197452229299362%, #d5495e 100%) !important;
+    color: white !important;
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify .form-check-label.checked:before {
+    color: #ffffff;
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_chauffage0]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_chauffage1]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_chauffage2]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_chauffage3]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_chauffage4]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_resident0]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_resident1]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_habitation0]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_habitation1]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation0]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation1]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation2]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation3]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation4]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation5]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.iconify [for^=type_renovation6]:before {
+    content: "";
+}
+form fieldset .form-row .form-group .formControls .form-check.numberify .form-check-label {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    overflow: hidden;
+    color: #032a3e;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px 0px, rgba(0, 0, 0, 0.3) 0px 30px 60px -10px;
+}
+form fieldset .form-row .form-group .formControls input[type=text],
+ form fieldset .form-row .form-group .formControls input[type=email],
+  form fieldset .form-row .form-group .formControls input[type=search],
+   form fieldset .form-row .form-group .formControls input[type=password] {
+    font-size: 14px;
+    line-height: 14px;
+    height: 60px;
+    border: 0;
+    padding: 0 20px;
+    background: none;
+    box-shadow: 0 0 0 1px #ccc;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    font-family:'Montserrat', sans-serif;
+}
+
+form fieldset .form-row .form-group .formControls input[type=text]::placeholder, form fieldset .form-row .form-group .formControls input[type=email]::placeholder, form fieldset .form-row .form-group .formControls input[type=search]::placeholder, form fieldset .form-row .form-group .formControls input[type=password]::placeholder {
+    text-align: left;
+    font-style: italic;
+    color: white !important;
+    display: none;
+}
+form fieldset .form-row .form-group .formControls input[type=text]:focus, form fieldset .form-row .form-group .formControls input[type=email]:focus, form fieldset .form-row .form-group .formControls input[type=search]:focus, form fieldset .form-row .form-group .formControls input[type=password]:focus {
+    font-size: 14px;
+}
+
+form fieldset .form-row .form-group .formControls small {
+    margin-top:10px;
+    color: black;
+    font-size: 11px;
+    display:inline-block;
+}
+form fieldset .form-row .form-group .formControls select {
+    font-size: 14px;
+    line-height: 14px;
+    height: 60px;
+    width: 100%;
+    border: 0;
+    padding: 0 20px;
+    background: none;
+    box-shadow: 0 0 0 2px #ccc;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+}
+form fieldset .form-row .form-group .formControls.range_slider {
+    padding: 0;
+    border-radius: 4px;
+    text-align: center;
+}
+form fieldset .form-row .form-group .formControls .rangeslider, form fieldset .form-row .form-group .formControls .rangeslider__fill {
+    display: block;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+form fieldset .form-row .form-group .formControls .rangeslider {
+    background: #e6e6e6;
+    position: relative;
+    height: 20px;
+    width: 70%;
+    display: inline-block;
+}
+form fieldset .form-row .form-group .formControls .rangeslider .rangeslider__fill {
+    background: linear-gradient(to right, #032a3e, #4dd8a6);
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+input#address,
+input#ville,
+input#code_postal {
+    font-family: 'Montserrat', sans-serif !important;
+}
+ /* 
+form fieldset .form-row .form-group .formControls .rangeslider .rangeslider__handle {
+    background: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-image: url("data:image/svg+xml;
+   base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…Igd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g");
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.1)));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    top: -10px;
+    touch-action: pan-y;
+}
+form fieldset .form-row .form-group .formControls .rangeslider .rangeslider__handle:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml;
+   base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.13)), to(rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+}
+*/ 
+form fieldset .form-row .form-group .formControls .rangeslider + output {
+    display: block;
+    font-weight: 600;
+    color: #032a3e;
+    font-size: 34px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+form fieldset .form-row .form-group .formControls .rangeslider + output:after {
+    content: "m²";
+}
+form fieldset .form-row .form-group .formControls button {
+    font-size: 18px;
+    color: inherit;
+    border: 0;
+    background: black;
+    margin: 0 auto;
+    border-radius: 30px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-family:'Montserrat', sans-serif;
+}
+form fieldset .form-row .form-group .formControls button[disabled],
+form fieldset .form-row .form-group .formControls button[disabled="disabled"],
+form fieldset .form-row .form-group .formControls button:disabled  {
+    opacity: 0.1 !important;
+}
+form fieldset .form-row .form-group .formControls button.btn-warning {
+    display: none;
+}
+form fieldset .form-row .form-group .formControls button.btn-warning span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+form fieldset .form-row .form-group .formControls .formValidation {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    z-index: 2;
+    transform: skewY(-6deg);
+    z-index: 4;
+}
+form fieldset .form-row .form-group .formControls .formValidation .formError, form fieldset .form-row .form-group .formControls .formValidation .formNoError {
+    display: none;
+    padding: 0 8px;
+    height: 20px;
+    line-height: 20px;
+    background: red;
+    color: #fff;
+    font-weight: normal;
+    z-index: 4;
+    position: relative;
+    border-radius: 0 4px 4px 0;
+}
+form fieldset .form-row .form-group .formControls .formValidation .formError:before, form fieldset .form-row .form-group .formControls .formValidation .formNoError:before {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #8c0505;
+    border-left: 15px solid transparent;
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+    left: 0;
+}
+form fieldset .form-row .form-group.rsform-block-address .formControls input{
+    padding-right: 50px;
+}
+form fieldset .form-row .form-group.rsform-block-address .formControls:after {
+    content: "\e903";
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    font-size: 30px;
+    font-family: 'icomoon';
+    line-height: 60px;
+    color: black;
+}
+
+@media (max-width: 991px) {
+    .col.client-box {
+        width: 50%;
+        padding: 10px;
+   }
+    .clients-style-06 .client-box img {
+        max-width: inherit;
+        height: 20px !important;
+   }
+    .mbx12d75637--Results {
+       /* max-width: 200px !important;
+        */
+        min-width: 260px !important;
+   }
+}
+.rsform-block-code-postal .formControlLabel, .rsform-block-ville .formControlLabel{
+    display: none !important;
+}
+#rsform_3_page_0{
+    font-size: 0;
+}
+.rsform-block-code-postal, .rsform-block-ville{
+    padding: 0 !important;
+    width: initial !important;
+    display: inline-block;
+}
+.rsform-block-code-postal{
+}
+.rsform-block-ville{
+}
+.rsform-block-code-postal{
+    psoition: relative;
+    padding-right: 5px !important;
+}
+.rsform-block-code-postal .formControls, .rsform-block-ville .formControls{
+    padding: 0 !important;
+    width: 100%;
+    margin-top: 10px;
+}
+.rsform-block-code-postal .formControls:after, .rsform-block-ville .formControls:after{
+    display: none !important 
+}
+.rsform-block-code-postal input, .rsform-block-ville input{
+    height: initial !important;
+    padding: 0 !important;
+    display: inline-block;
+    width: 100% !important;
+    max-width: initial !important;
+    box-shadow: initial !important;
+    color: #29d378 !important;
+    font-size: 12px !important;
+    field-sizing: content;
+    font-weight: 600;
+    border-radius:0 !important;
+}
+.rsform-block-ville input{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+input#address::placeholder{
+    color:black !important;
+}
+
+.mbx0027da74--ResultsAttribution {
+    display: none !important;
+}
